@@ -5,12 +5,13 @@ Linear tensor interpolation in Matlab over a uniform grid
 
 
 Compilation
-===========================
-mex ltinterp.c
+------------------
+Compile the extension for you platform
+    mex ltinterp.c
 
 
 Setting up the grid
-===========================
+------------------
 First step is to create a tensor domain over which you want to interpolate the function. The following line creates a grid with 
 x-coordinate stretching from -1 to 1 and y-coordinate stretching from -2 to 3. There are 100 points in each direction. The grid is uniform.
     
@@ -19,7 +20,7 @@ x-coordinate stretching from -1 to 1 and y-coordinate stretching from -2 to 3. T
 
 
 Initializing the grid
-===========================
+------------------
 The next step is to store the values of the function in the values hypermatrix. The property grid.ns gives you an initializing value for 
 zeros constructor.
 
@@ -32,7 +33,7 @@ zeros constructor.
 
 
 Interpolation
-===========================
+------------------
 Once the grid is set up and initialized you can use ltinterp to interpolate the values. 
 
     g = @(x, y) ltinterp(grid, fs, [x, y]);
